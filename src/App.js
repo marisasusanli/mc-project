@@ -25,6 +25,16 @@ const App = () => {
     setFavorites(updated);
   };
 
+  const handleSort = (e) => {
+    const sortBy = e.target.value;
+    if (sortBy === 'none') return;
+    else if (sortBy === 'rating') {
+      const data = [...coursesToDisplay];
+      const sortedData = data.sort((a, b) => b.rating - a.rating);
+      setCoursesToDisplay(sortedData);
+    }
+  };
+
   return (
     <div className='main'>
       <header className='main-header'>Welcome to MasterClass</header>
@@ -33,6 +43,13 @@ const App = () => {
         <select name='filter' onChange={(e) => setFilter(e.target.value)}>
           <option value='all'>All Courses</option>
           <option value='favorites'>Favorites</option>
+        </select>
+      </div>
+      <div className='sort-dropdown'>
+        <label htmlFor='sort'>Sort by: </label>
+        <select name='sort' onChange={handleSort}>
+          <option value='none'>-</option>
+          <option value='rating'>Rating</option>
         </select>
       </div>
       <div className='course-list'>

@@ -30,6 +30,11 @@
   color: #f5c3c0;
 }
 
+.item-rating {
+  color: #b19a8c;
+  font-weight: 600;
+}
+
 .heart-icon {
   width: 10%;
   margin: 5px;

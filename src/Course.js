@@ -15,6 +15,10 @@ const Course = ({ courseData, favorites, addToFavs, removeFromFavs }) => {
       <div className='item-text'>
         <h3 className='item-name'>{courseData.instructor_name}</h3>
         <h3 className='item-title'>{courseData.title}</h3>
+        <p className='item-rating'>
+          Rating: {courseData.rating}{' '}
+          {courseData.rating === 1 ? 'star' : 'stars'}
+        </p>
       </div>
 
       <div className={'heart-icon'}>

@@ -18,6 +18,7 @@
   justify-content: center;
 }
 
-.filter-dropdown {
+.filter-dropdown,
+.sort-dropdown {
   margin: 10px;
 }
