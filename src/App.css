@@ -17,3 +17,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.filter-dropdown {
+  margin: 10px;
+}
