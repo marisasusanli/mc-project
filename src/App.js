@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import allCourses from './CourseDataRated.json';
+import Course from './Course';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main'>
+      <header className='main-header'>Welcome to MasterClass</header>
+      <div className='course-list'>
+        {allCourses.length
+          ? allCourses.map((course) => (
+              <Course key={course.id} courseData={course} />
+            ))
+          : 'There are no courses to view at this time.'}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
