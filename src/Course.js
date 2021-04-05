@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Course = ({ courseData, favorites, addToFavs, removeFromFavs }) => {
   return (
-    <div className='course-list-item'>
+    <div className='course-list-item grow'>
       <img
         src={courseData.instructor_image_url}
         className={'item-img'}

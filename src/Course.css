@@ -40,3 +40,23 @@
   margin: 5px;
   color: #f1564b;
 }
+
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 992px) {
+  .course-list-item {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .course-list-item {
+    width: 80%;
+  }
+}
